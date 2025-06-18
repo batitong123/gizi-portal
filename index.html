@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Komunikasi Guru - SPPG Kadipaten</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-green-50 font-sans">
+  <header class="bg-green-700 text-white p-6 text-center shadow-md">
+    <h1 class="text-4xl font-bold">Portal Komunikasi Guru</h1>
+    <p class="text-lg mt-1">Bersama SPPG Kadipaten untuk Gizi Nasional yang Lebih Baik</p>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 mt-6">
+    <section class="mb-10 bg-white p-6 rounded-lg shadow">
+      <h2 class="text-2xl font-semibold mb-4 text-green-700">Masuk / Daftar Akun</h2>
+      <form action="/login" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block">Email:
+            <input type="email" name="email" class="w-full p-2 border rounded mt-1" required>
+          </label>
+        </div>
+        <div>
+          <label class="block">Password:
+            <input type="password" name="password" class="w-full p-2 border rounded mt-1" required>
+          </label>
+        </div>
+        <div class="col-span-2">
+          <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">Login</button>
+        </div>
+      </form>
+
+      <form action="/register" method="POST" class="mt-6 bg-gray-100 p-4 rounded shadow">
+        <h3 class="text-lg font-semibold text-green-800 mb-2">Daftar Akun Baru</h3>
+        <label class="block mb-2">Email:
+          <input type="email" name="email" class="w-full p-2 border rounded" required>
+        </label>
+        <label class="block mb-2">Password:
+          <input type="password" name="password" class="w-full p-2 border rounded" required>
+        </label>
+        <button type="submit" class="bg-green-700 text-white px-4 py-2 rounded mt-2">Daftar</button>
+      </form>
+    </section>
+
+    <section class="mb-6 bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-2 text-green-700">Informasi Sekolah</h2>
+      <p><strong>Nama Sekolah:</strong> SDN Kadipaten 1</p>
+      <p><strong>Alamat:</strong> Jl. Pendidikan No. 10, Kadipaten, Majalengka</p>
+    </section>
+
+    <section class="mb-6 bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-2 text-green-700">Data Jumlah Siswa per Kelas</h2>
+      <table class="w-full border border-gray-300">
+        <thead class="bg-green-100">
+          <tr>
+            <th class="p-2 border">Kelas</th>
+            <th class="p-2 border">Jumlah Siswa</th>
+            <th class="p-2 border">Laki-laki</th>
+            <th class="p-2 border">Perempuan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="text-center">
+            <td class="border p-2">Kelas 1</td>
+            <td class="border p-2">30</td>
+            <td class="border p-2">16</td>
+            <td class="border p-2">14</td>
+          </tr>
+          <tr class="text-center">
+            <td class="border p-2">Kelas 2</td>
+            <td class="border p-2">28</td>
+            <td class="border p-2">15</td>
+            <td class="border p-2">13</td>
+          </tr>
+          <tr class="text-center">
+            <td class="border p-2">Kelas 3</td>
+            <td class="border p-2">32</td>
+            <td class="border p-2">17</td>
+            <td class="border p-2">15</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-2 text-green-700">Masukan & Saran</h2>
+      <form action="/submit-feedback" method="POST" class="space-y-4">
+        <div>
+          <label class="block">Nama Guru:
+            <input type="text" name="nama" class="w-full p-2 border rounded mt-1" required>
+          </label>
+        </div>
+        <div>
+          <label class="block">Sekolah:
+            <input type="text" name="sekolah" class="w-full p-2 border rounded mt-1" required>
+          </label>
+        </div>
+        <div>
+          <label class="block">Pesan atau Saran:
+            <textarea name="pesan" class="w-full p-2 border rounded mt-1" rows="4" required></textarea>
+          </label>
+        </div>
+        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">Kirim</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="text-center text-gray-600 text-sm p-4 mt-10">
+    &copy; 2025 SPPG Kadipaten. Portal Komunikasi Guru - Gizi Nasional.
+  </footer>
+</body>
+</html>
